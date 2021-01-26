@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016 The Android Open Source Project
+ * Copyright (C) 2021 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,23 +14,9 @@
  * limitations under the License.
  */
 
-#ifndef WIFI_LEGACY_HAL_STUBS_H_
-#define WIFI_LEGACY_HAL_STUBS_H_
+package vendor.lineage.touch@1.0;
 
-namespace android {
-namespace hardware {
-namespace wifi {
-namespace V1_4 {
-namespace implementation {
-namespace legacy_hal {
-#include <hardware_legacy/wifi_hal.h>
-
-bool initHalFuncTableWithStubs(wifi_hal_fn* hal_fn);
-}  // namespace legacy_hal
-}  // namespace implementation
-}  // namespace V1_4
-}  // namespace wifi
-}  // namespace hardware
-}  // namespace android
-
-#endif  // WIFI_LEGACY_HAL_STUBS_H_
+interface IKeySwapper {
+    isEnabled() generates (bool rc);
+    setEnabled(bool enabled) generates (bool rc);
+};

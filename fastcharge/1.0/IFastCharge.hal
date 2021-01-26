@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016 The Android Open Source Project
+ * Copyright (C) 2020 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,24 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package vendor.lineage.fastcharge@1.0;
 
-#ifndef WIFI_LEGACY_HAL_STUBS_H_
-#define WIFI_LEGACY_HAL_STUBS_H_
-
-namespace android {
-namespace hardware {
-namespace wifi {
-namespace V1_4 {
-namespace implementation {
-namespace legacy_hal {
-#include <hardware_legacy/wifi_hal.h>
-
-bool initHalFuncTableWithStubs(wifi_hal_fn* hal_fn);
-}  // namespace legacy_hal
-}  // namespace implementation
-}  // namespace V1_4
-}  // namespace wifi
-}  // namespace hardware
-}  // namespace android
-
-#endif  // WIFI_LEGACY_HAL_STUBS_H_
+interface IFastCharge {
+    isEnabled() generates (bool rc);
+    setEnabled(bool enable) generates (bool rc);
+};
